@@ -1,3 +1,4 @@
+"""
 def is_even(number):
 	if number %2 == 0:
 		return True
@@ -49,6 +50,8 @@ def is_square(number):
 		return false
 
 print(is_square(25))
+
+"""
 
 def is_palindrome(number):
 	if number <0:

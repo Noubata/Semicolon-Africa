@@ -8,7 +8,7 @@
 #- print sum.
 
 
-number = int(input("Enter an digit: "))
+number = int(input("Enter an number: "))
 
 sum = 1
 
