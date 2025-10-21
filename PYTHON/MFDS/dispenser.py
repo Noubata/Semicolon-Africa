@@ -1,13 +1,15 @@
+transactions = []
 transactions_container = []
 
-def save_transaction(product, price, quantity):
+def save_transaction(price, quantity):
 	transactions_container.append({
 	"product": 'product',
 	price : 20,
 	quantity : 1200
+	
 })
 
-def buy():
+def buy(input, transactions ):
 	
 	print("""
 	1 -> Diesel --- 600/liter
@@ -48,6 +50,7 @@ def buy():
 					print("Oga, una no hear again ?? Amount must be above a liter price")
 				else :
 					quantity = price/ 600
+					transactions += quantity
 					if type(quantity) == float:
 						exact_quantity = int(quantity)
 						decimal_part = quantity - exact_quantity
@@ -112,23 +115,21 @@ def buy():
 						print("Liters :", quantity)
 						print("Thank you for your patronage")
 
-
+	save_transaction(price, quantity)
 	return user_input
 
 
 
-def transaction_history():
+def transaction_history(transactions):
 
 	print("\n=== All transactions ===")
 
 	if len(transactions_container) == 0:
 		print("Oga, no transactions naww.")
 	else:
-		to_iterate = 0
-		while to_iterate < len(transactions_container):
-			index = transactions_container[to_iterate]
-			print(str(to_iterate + 1) + ". Product: " + index["product"] + ", Liters: " + str(index["price"]) + ", Amount: ₦" + str(index["quantity"]))
-		sum = sum + 1
+		print("\n=== All transactions ===")
+		print(str(save_transaction()))
+		
 	print("============================\n")
 	
 

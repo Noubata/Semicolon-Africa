@@ -1,4 +1,4 @@
-from dispenser import buy, transaction_history
+from dispenser import *
 print("""
 Welcome to NGONE NGAR, your favorite Chadian Station in Naija
 	1 -> Buy petroleum
@@ -9,6 +9,7 @@ choice = int(input("Enter your choice: "))
 match choice:
 
 	case 1 : 
-		buy()
+		input
+		buy(input)
 	case 2 :
 		transaction_history()
