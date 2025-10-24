@@ -1,6 +1,3 @@
 import math
-def suggest_books(random):
-
-	while True:
-		choice = input()
-	retun choice
+def suggest_books(books):
+	return books

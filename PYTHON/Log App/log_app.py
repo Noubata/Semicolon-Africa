@@ -3,14 +3,13 @@ def deposit(amount, account_balance, transactions = []):
 	account_balance += amount
 	transactions.append(f"Deposited:{amount} | New Balance:{account_balance}")
 	
-	#transactions.append(account_balance)
+	transactions.append(amount)
 	return account_balance
 
 def withdraw(amount, account_balance, transactions = []):
-
-	difference = account_balance - amount
-	if amount > account_balance :
-		 transactions.append(f"Withdrew: ₦{amount} | New Balance: ₦{account_balance}")
+	if amount <= account_balance :
+		account_balance = account_balance - amount
+		transactions.append(f"Withdrew: ₦{amount} | New Balance: ₦{account_balance}")
 	else:
 		 "Withdrawal failed: insufficient funds"
 	return account_balance
@@ -24,5 +23,5 @@ def transaction(transactions=[]):
 
 def exit(transactions = []):
 	
-	print(f"Your final balance: {transactions}")
+	print(f"Your final balance: {account_balance}")
 	print("Thank you for using Transaction LOG APP")

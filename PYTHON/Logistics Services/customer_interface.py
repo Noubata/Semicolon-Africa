@@ -2,7 +2,7 @@ from logistics_services import delivery
 
 while True:
 
-	print("""
+	dashboard = """
 	--------------------------------
 	|Collection rate|Amount_|BasePay|
 	|		|	|	|
@@ -14,7 +14,8 @@ while True:
 	|		  |	|	|
 	|Greater than 70%_|__500|___5000|
 
-	""")
+	"""
+	print(dashboard)
 	prompt = int(input("Enter 1 to calculate the wage for the day or 2 to exit: "))
 	
 	match prompt :

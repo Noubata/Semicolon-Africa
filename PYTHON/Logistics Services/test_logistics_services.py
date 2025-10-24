@@ -28,7 +28,7 @@ class TestLogisticsServices(unittest.TestCase):
 		expected_amount = 20000
 		self.assertEqual(actual_amount, expected_amount)
 
-	def test_that_the_function_returns_calculated_amount_greater_than_or_equal_to_70_percentage(self):
+	def test_that_the_function_returns_calculated_amount_when_greater_than_or_equal_to_70_percentage(self):
 	
 		actual_amount = delivery(70)
 		expected_amount = 40000

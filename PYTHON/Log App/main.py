@@ -1,32 +1,31 @@
 from log_app import *
-def main():
-	account = 0
-	transactions = []
 
-	menu = 0
-	while menu != 0:
+account_balance = 0
+transactions = []
+while True:
 
-		print("""
-		Welcome to Transaction LOG APP
+	print("""
+	Welcome to Transaction LOG APP
 	
-		1. Deposit money
-		2. Withdraw
-		3. Transaction Histoty
-		4. Exit
+	1. Deposit money
+	2. Withdraw
+	3. Transaction Histoty
+	4. Exit
 	
-		""")
-		choice = int(input("Enter your choice: "))
-		match choice :
+	""")
+	choice = int(input("Enter your choice: "))
+	match choice :
 
-			case 1:
-				prompt = int(input("Enter your amount: "))
-				deposit(amount, account_balance, transactions = [])
-			case 2:
-				prompt = int(input("Enter your amount: "))
-				withdraw(amount, account_balance, transactions = [])
-			case 3:
-				transaction(transactions=[])
-			case 4:
-				exit()
-	return 
-print(main())
+		case 1:
+			prompt = int(input("Enter your amount: "))
+			account_balance = deposit(prompt, account_balance, transactions)
+			print(f"New balance{account_balance}")
+		case 2:
+			prompt = int(input("Enter your amount: "))
+			account_balance = withdraw(prompt, account_balance, transactions)
+			print(f"New balance{account_balance}")
+		case 3:
+			transaction(transactions)
+		case 4:
+			exit()
+			break
