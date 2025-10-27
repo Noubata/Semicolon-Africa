@@ -74,3 +74,61 @@ def sum_of_numbers(number1, number2):
 get_sum =  reduce(sum_of_numbers, range(1, 51))
 
 print(get_sum)
+
+
+def find_square (number) :
+
+	return number * number
+get_square = list(map(find_square, range(1, 11)))
+print(get_square)
+
+prices = [100, 200, 300]
+def add_tax (number):
+
+	for element in prices:
+		element = number + (number * 10)/100
+		return element
+get_tax = list(map(add_tax, prices))
+
+print(get_tax)
+
+lists1 = ['python', 'java', 'c++']
+def convert_strings(word):
+
+	for element in lists1 :
+		element = word.upper()
+	return element
+converted = list(map(convert_strings, lists1))
+print(converted)
+
+
+def divisible (number):
+
+	if number % 5 == 0 and number % 3 == 0:
+		return number
+get_result = list(filter(divisible, range(1, 52)))
+print(get_result)
+
+from functools import reduce
+numbers = [1, 2, 3, 4]
+def square_and_product(number):
+
+	for element in numbers:
+		element = number * number
+	return element 
+	for each in numbers:
+		each = element * element
+	return each
+		 
+get_square = list(map(square_and_product, numbers))
+print("the square is :",get_square, end='')
+get_product = reduce(lambda number1, number2:number1 * number2 , get_square)
+print(" and their product is:",get_product)
+
+
+words = ['I', 'love', 'Python'] 
+
+get_single_string = reduce(lambda word1, word2: word1 + ' ' + word2, words)
+
+print(get_single_string)
+
