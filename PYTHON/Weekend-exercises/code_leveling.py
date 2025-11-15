@@ -132,3 +132,8 @@ get_single_string = reduce(lambda word1, word2: word1 + ' ' + word2, words)
 
 print(get_single_string)
 
+names = ['john', 'mary', 'steve']
+def capitalize_letters(name):
+
+	for word in words:
+		
