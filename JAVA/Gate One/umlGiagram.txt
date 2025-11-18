@@ -1,0 +1,47 @@
+/*
+Class : Problem
+
+Attribute: Type
+
+name: String
+type: ProblemType
+isSolved: Boolean
+
+
+Method :
+
+solve()
+
+
+Class : Person
+
+Attribute: Type
+
+problems: Problem
+
+
+Methods :
+
+addProblem(problem)
+
+solveProblem(problem)
+
+tellUnsolvedProblems()
+
+*/
+
+public class Problem{
+
+private String name;
+private String problemType;
+private Boolean isSolved;
+
+
+public static int solve(name, ProblemType, isSolved){
+
+this.name "Financial";
+this.problemType "Financial";
+this.issolved false;
+
+}
+}
